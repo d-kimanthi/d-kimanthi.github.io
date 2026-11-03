@@ -648,6 +648,10 @@ mark {
   border-bottom: 1px solid var(--hair);
 }
 
+.creds .no-dates li {
+  grid-template-columns: 1fr;
+}
+
 .creds li span {
   grid-row: span 2;
   color: var(--signal);
