@@ -2,708 +2,337 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Kimanthi Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/favicon/favicon.ico"
-      type="image/x-icon"
+    <title>David Kimanthi — Data Engineer</title>
+    <meta
+      name="description"
+      content="David Kimanthi is a Senior Data Engineer with 8+ years building cloud data platforms, ELT pipelines and data warehouses on AWS, GCP, Snowflake and Palantir Foundry."
     />
+    <meta name="author" content="David Kimanthi" />
+    <link rel="canonical" href="https://d-kimanthi.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://d-kimanthi.github.io/" />
+    <meta property="og:image" content="https://d-kimanthi.github.io/assets/images/david.jpg" />
+    <meta property="og:title" content="David Kimanthi — Data Engineer" />
+    <meta
+      property="og:description"
+      content="Pipelines, warehouses and data models. Python · SQL · dbt · Airflow · Snowflake · AWS."
+    />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)" />
 
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/images/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/images/favicon/favicon-96x96.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
 
-    <!--
-    - google font link
-  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112.5,300..600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- apply saved theme before paint to avoid a flash -->
+    <script>
+      try {
+        const t = localStorage.getItem("theme");
+        if (t) document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Kimanthi",
+        "jobTitle": "Senior Data Engineer",
+        "email": "mailto:jephdavid@gmail.com",
+        "address": { "@type": "PostalAddress", "addressRegion": "VA", "addressCountry": "US" },
+        "alumniOf": ["Carnegie Mellon University", "University of Nairobi"],
+        "sameAs": ["https://www.linkedin.com/in/kimanthi", "https://github.com/d-kimanthi"]
+      }
+    </script>
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!--
-    - #MAIN
-  -->
-
-    <main>
-      <!--
-      - #SIDEBAR
+      - #TOPBAR
     -->
+    <header class="topbar wrap" id="top">
+      <a href="#top" class="topbar-name">D. Kimanthi</a>
 
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img src="./assets/images/profile_img.jpg" alt="David Kimanthi" />
+      <nav class="topbar-nav" aria-label="Primary">
+        <a href="#experience"><span>01</span>Experience</a>
+        <a href="#work"><span>02</span>Work</a>
+        <a href="#capabilities"><span>03</span>Capabilities</a>
+      </nav>
+
+      <div class="topbar-end">
+        <a href="./assets/files/David_Kimanthi_Resume.pdf" target="_blank" rel="noopener">Résumé ↓</a>
+        <button type="button" class="theme-btn" data-theme-toggle aria-label="Toggle color theme">
+          <span class="theme-dot" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!--
+        - #HERO
+      -->
+      <section class="hero wrap" aria-labelledby="hero-name">
+        <dl class="meta-row">
+          <div><dt>Role</dt><dd>Senior Data Engineer</dd></div>
+          <div><dt>Currently</dt><dd>Proxify</dd></div>
+          <div><dt>Based</dt><dd>Virginia, US</dd></div>
+          <div><dt>Since</dt><dd>2017</dd></div>
+        </dl>
+
+        <div class="name-block">
+          <h1 class="name" id="hero-name">
+            <span class="name-first">David</span>
+            <span class="name-last">Kimanthi</span>
+          </h1>
+          <figure class="duotone hero-photo">
+            <img src="./assets/images/david.jpg" alt="Portrait of David Kimanthi" width="900" height="1168" />
           </figure>
+        </div>
 
-          <div class="info-content">
-            <h1 class="name" title="David Kimanthi">David Kimanthi</h1>
+        <div class="hero-foot">
+          <p class="lede">
+            I architect and scale cloud-based data platforms that turn complex
+            data into trusted, actionable intelligence. With 8+ years of
+            software engineering experience, including 5 years in data
+            engineering, I build high-performance pipelines, modern data
+            warehouses, and analytics models across AWS, GCP, Snowflake, and
+            Palantir Foundry using <mark>Python, SQL, dbt, and Airflow</mark>.
+            Currently developing AI-ready data models that power intelligent
+            agents and enable reliable, context-aware decision-making.
+          </p>
 
-            <p class="title">Senior Data Engineer</p>
+          <ul class="link-list">
+            <li><a href="mailto:jephdavid@gmail.com"><span>Email</span><span aria-hidden="true">→</span></a></li>
+            <li><a href="https://www.linkedin.com/in/kimanthi" target="_blank" rel="noopener"><span>LinkedIn</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/d-kimanthi" target="_blank" rel="noopener"><span>GitHub</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="./assets/files/David_Kimanthi_Resume.pdf" target="_blank" rel="noopener"><span>Résumé, PDF</span><span aria-hidden="true">↓</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- tool ticker -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Python</span><span>SQL</span><span>dbt</span><span>Airflow</span><span>Snowflake</span><span>BigQuery</span><span>PySpark</span><span>Kafka</span><span>Databricks</span><span>Dagster</span><span>Airbyte</span><span>Iceberg</span><span>Terraform</span><span>Docker</span><span>AWS</span><span>GCP</span><span>Palantir Foundry</span>
+          <span>Python</span><span>SQL</span><span>dbt</span><span>Airflow</span><span>Snowflake</span><span>BigQuery</span><span>PySpark</span><span>Kafka</span><span>Databricks</span><span>Dagster</span><span>Airbyte</span><span>Iceberg</span><span>Terraform</span><span>Docker</span><span>AWS</span><span>GCP</span><span>Palantir Foundry</span>
+        </div>
+      </div>
+
+      <!--
+        - #EXPERIENCE
+      -->
+      <section class="block wrap" id="experience" aria-labelledby="exp-title">
+        <header class="block-head">
+          <span class="block-no">01</span>
+          <h2 id="exp-title">Experience</h2>
+          <p class="block-note">Select a row for details</p>
+        </header>
+
+        <div class="table" role="list">
+          <div class="table-head" aria-hidden="true">
+            <span>Period</span><span>Company</span><span>Role</span><span>Stack</span><span></span>
           </div>
 
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
+          <details class="row" role="listitem" open>
+            <summary>
+              <span class="c-period">2025 — Now</span>
+              <span class="c-org">Proxify</span>
+              <span class="c-role">Senior Data Engineer</span>
+              <span class="c-stack">Snowflake, dbt, S3, BigQuery</span>
+              <span class="c-toggle" aria-hidden="true"></span>
+            </summary>
+            <ul class="row-body">
+              <li>Architected a production ELT pipeline ingesting 30K+ order line items a day across 12 Amazon marketplaces (SP-API → S3 → Snowflake → dbt). It powers executive revenue dashboards and finance reporting.</li>
+              <li>Built a dbt star schema (staging, intermediate, marts) with date-based revenue recognition and models for sales, refunds and settlement reconciliation.</li>
+              <li>Redesigned BigQuery schemas and dimensional models, cutting query latency by 30%.</li>
+            </ul>
+          </details>
 
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
+          <details class="row" role="listitem">
+            <summary>
+              <span class="c-period">2022 — 2025</span>
+              <span class="c-org">IDinsight</span>
+              <span class="c-role">Data Engineer III</span>
+              <span class="c-stack">Postgres, Airbyte, dbt, Airflow, Databricks</span>
+              <span class="c-toggle" aria-hidden="true"></span>
+            </summary>
+            <ul class="row-body">
+              <li>Architected an enterprise data warehouse on AWS RDS (PostgreSQL) supporting 82+ KPIs across 8 national programs, with centralised reporting and scorecards.</li>
+              <li>Removed 15+ hours a week of manual financial reconciliation with a daily ELT pipeline (Airbyte, dbt, BigQuery, Looker Studio) unifying 3 source systems for a 200+ project portfolio.</li>
+              <li>Shipped automated pipelines with Python (Flask, FastAPI), Airflow, Docker and Databricks, plus GitHub Actions and Terraform CI/CD that reduced pipeline failures.</li>
+            </ul>
+          </details>
+
+          <details class="row" role="listitem">
+            <summary>
+              <span class="c-period">2021 — 2022</span>
+              <span class="c-org">Hence AI</span>
+              <span class="c-role">Data Engineer</span>
+              <span class="c-stack">Palantir Foundry, PySpark</span>
+              <span class="c-toggle" aria-hidden="true"></span>
+            </summary>
+            <ul class="row-body">
+              <li>Built an end-to-end Foundry pipeline (Python, BeautifulSoup, PySpark) unifying web-scraped data into a master view of legal professionals for a curated marketplace.</li>
+              <li>Designed Foundry ontologies and fuzzy-matching transforms to deduplicate and enrich thousands of records, improving search accuracy.</li>
+              <li>Implemented ontology write-back workflows that kept user actions and pipelines consistent.</li>
+            </ul>
+          </details>
+
+          <details class="row" role="listitem">
+            <summary>
+              <span class="c-period">2019 — 2020</span>
+              <span class="c-org">Safaricom</span>
+              <span class="c-role">Software Engineer in Test</span>
+              <span class="c-stack">Python, pytest, React, Jenkins</span>
+              <span class="c-toggle" aria-hidden="true"></span>
+            </summary>
+            <ul class="row-body">
+              <li>Built a React dashboard on REST APIs giving 20+ developers across 5 teams real-time visibility into automation results.</li>
+              <li>Created a pytest framework for SOAP/REST APIs and wired it into Jenkins CI/CD to validate microservices continuously.</li>
+            </ul>
+          </details>
+
+          <details class="row" role="listitem">
+            <summary>
+              <span class="c-period">2017 — 2019</span>
+              <span class="c-org">PwC</span>
+              <span class="c-role">Software Application Developer</span>
+              <span class="c-stack">SSIS, T-SQL, SQL Server</span>
+              <span class="c-toggle" aria-hidden="true"></span>
+            </summary>
+            <ul class="row-body">
+              <li>Owned data migrations from legacy on-prem systems to Salesforce with zero downtime.</li>
+              <li>Built SSIS ETL pipelines and T-SQL procedures for batch processing, integration and reporting on SQL Server.</li>
+            </ul>
+          </details>
         </div>
-
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
-
-          <ul class="contacts-list">
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="document-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Resume</p>
-                <a
-                  href="./assets/files/David_Kimanthi_Resume_Aug_JD.pdf"
-                  class="contact-link"
-                  >Download Resume</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a href="mailto:jephdavid@gmail.com" class="contact-link"
-                  >jephdavid@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>Fairfield, Iowa, USA</address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/kimanthi"
-                class="social-link"
-              >
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://github.com/d-kimanthi" class="social-link">
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a href="https://twitter.com/dave_kimanthi" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
+      </section>
 
       <!--
-      - #main-content
-    -->
-
-      <div class="main-content">
-        <!--
-        - #NAVBAR
+        - #WORK
       -->
+      <section class="block wrap" id="work" aria-labelledby="work-title">
+        <header class="block-head">
+          <span class="block-no">02</span>
+          <h2 id="work-title">Selected work</h2>
+          <p class="block-note">Open source, built on my own time</p>
+        </header>
 
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
+        <ol class="works">
+          <li>
+            <a href="https://github.com/d-kimanthi/data_lakehouse_pipeline" target="_blank" rel="noopener">
+              <span class="w-no">A</span>
+              <span class="w-title">Streaming lakehouse</span>
+              <span class="w-desc">Real-time e-commerce events from Kafka through Spark Structured Streaming into Iceberg tables versioned by Nessie. Queried with Trino, orchestrated by Dagster, charted in Superset.</span>
+              <span class="w-stack">Kafka / Spark / Iceberg / Trino</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/d-kimanthi/databricks-airflow" target="_blank" rel="noopener">
+              <span class="w-no">B</span>
+              <span class="w-title">Airflow on Kubernetes</span>
+              <span class="w-desc">A bronze → silver → gold pipeline over the StackExchange dump. Airflow on kind via Helm with git-synced DAGs, Databricks transforms and DQX quality checks.</span>
+              <span class="w-stack">Airflow / K8s / Databricks</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/d-kimanthi/retail_analytics" target="_blank" rel="noopener">
+              <span class="w-no">C</span>
+              <span class="w-title">Retail POS analytics</span>
+              <span class="w-desc">Simulated point-of-sale events from many stores, streamed with Spark into Iceberg on S3 and queryable from Athena through the Glue catalog.</span>
+              <span class="w-stack">Kafka / Spark / Glue / Athena</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/d-kimanthi/rag_document_assistant" target="_blank" rel="noopener">
+              <span class="w-no">D</span>
+              <span class="w-title">RAG doc assistant</span>
+              <span class="w-desc">An ingestion pipeline crawls, chunks and embeds docs into Pinecone; a Streamlit chat returns grounded answers with source citations.</span>
+              <span class="w-stack">LangChain / Pinecone</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/d-kimanthi/multi_agent_document_processor" target="_blank" rel="noopener">
+              <span class="w-no">E</span>
+              <span class="w-title">Multi-agent doc intelligence</span>
+              <span class="w-desc">Async agents for NER, summarisation, topic modelling and semantic search over uploaded documents, with a React dashboard to watch them work.</span>
+              <span class="w-stack">FastAPI / spaCy / ChromaDB</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/d-kimanthi/agentic_ai_meal_planner" target="_blank" rel="noopener">
+              <span class="w-no">F</span>
+              <span class="w-title">Agentic meal planner</span>
+              <span class="w-desc">A draft → critique → revise loop that plans meals within budget, calorie and allergen limits, then writes the grocery list.</span>
+              <span class="w-stack">Python / LLM workflows</span>
+              <span class="w-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ol>
+      </section>
 
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Projects</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--
-        - #ABOUT
+      <!--
+        - #CAPABILITIES
       -->
+      <section class="block wrap" id="capabilities" aria-labelledby="cap-title">
+        <header class="block-head">
+          <span class="block-no">03</span>
+          <h2 id="cap-title">Capabilities</h2>
+        </header>
 
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
+        <div class="cap-grid">
+          <dl class="spec">
+            <div><dt>Languages</dt><dd>Python, SQL, Java, TypeScript</dd></div>
+            <div><dt>Processing</dt><dd>PySpark, Kafka, dbt, batch and streaming ETL/ELT</dd></div>
+            <div><dt>Warehousing</dt><dd>Snowflake, BigQuery, Databricks, PostgreSQL, Iceberg, dimensional modeling</dd></div>
+            <div><dt>Orchestration</dt><dd>Airflow, Dagster, Airbyte</dd></div>
+            <div><dt>Platforms</dt><dd>AWS, GCP, Palantir Foundry</dd></div>
+            <div><dt>Quality</dt><dd>Great Expectations, dbt tests, pytest, data catalogs</dd></div>
+            <div><dt>Infra</dt><dd>Docker, Terraform, GitHub Actions, CI/CD</dd></div>
+            <div><dt>BI</dt><dd>Power BI, Looker Studio, dbt Semantic Layer</dd></div>
+          </dl>
 
-          <section class="about-text">
-            <p style="text-align: justify">
-              I'm a results-driven Data Engineer with 4+ years of experience
-              designing scalable, testable data systems in cloud environments.
-              Proven success in delivering robust data pipelines and analytics
-              platforms using Python, SQL, dbt, and AWS. Demonstrated ability to
-              drive business impact by enabling data-driven decision-making
-              through optimized ETL processes, KPI dashboards, and data
-              modeling. AWS Certified and experienced with cross-functional
-              teams in dynamic, fast-paced environments.
-            </p>
-          </section>
-
-          <!--
-          - service
-        -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What I Build</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/data-warehouse.png"
-                    alt="data warehouse icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Data Engineering</h4>
-
-                  <p class="service-item-text">
-                    Designing and building robust data pipelines with modern
-                    stacks (Airbyte, dbt, PySpark, BigQuery, PostgreSQL) â€"
-                    turning messy raw data into trusted, analytics-ready
-                    datasets at scale.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/server.png"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Cloud & Infrastructure</h4>
-
-                  <p class="service-item-text">
-                    Architecting AWS/GCP solutions with Infrastructure-as-Code,
-                    CI/CD, and containerization â€" ensuring high availability,
-                    security, and cost-efficient performance.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/programming.png"
-                    alt="programming icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Backend Engineering</h4>
-
-                  <p class="service-item-text">
-                    Developing cloud-native APIs and microservices with Python
-                    (FastAPI/SQLAlchemy), Terraform, and Docker â€" powering
-                    real-time insights and resilient business operations.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/metrics.png"
-                    alt="camera icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Analytics & AI Integration
-                  </h4>
-
-                  <p class="service-item-text">
-                    Transforming data into actionable insights with Power BI and
-                    Looker; integrating ML/NLP pipelines (SpaCy, PySpark) to
-                    enrich products and unlock smarter decision-making.
-                  </p>
-                </div>
-              </li>
+          <div class="creds">
+            <h3 class="label">Education</h3>
+            <ul>
+              <li><span>2025 —</span><b>MSc Computer Science</b><i>Maharishi International University</i></li>
+              <li><span>2021</span><b>MSc Information Technology</b><i>Carnegie Mellon University</i></li>
+              <li><span>2016</span><b>BSc Computer Science</b><i>University of Nairobi</i></li>
             </ul>
-          </section>
-        </article>
 
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="school-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Education</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Carnegie Mellon University, Pittsburgh, PA
-                </h4>
-
-                <span>2020 to 2021 </span>
-
-                <p class="timeline-text">
-                  Master of Science in Information Technology
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  University of Nairobi, Kenya
-                </h4>
-
-                <span>2012 to 2016</span>
-
-                <p class="timeline-text">
-                  Bachelor of Science in Computer Science
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Experience</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Senior Data Engineer</h4>
-
-                <span style="font-size: small"
-                  >IDinsght LTD (2022 to 2025)</span
-                >
-
-                <p class="timeline-text">
-                  Led a cross-functional team of engineers and client
-                  stakeholders to deliver an enterprise-grade data warehouse
-                  (PostgreSQL/AWS RDS) with highly resilient, fault-tolerant
-                  architecture, supporting 82+ KPIs and enabling real-time
-                  analytics across 8 semi-urban social programs.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Data Engineer</h4>
-
-                <span style="font-size: small"> Hence AI (2021 to 2022)</span>
-
-                <p class="timeline-text">
-                  Built PySpark pipelines to process legal datasets, cutting 15+
-                  hours of manual work weekly and enabling real-time product
-                  updates.
-                </p>
-                <p class="timeline-text">
-                  Designed data ontologies with product teams, reducing
-                  integration complexity and accelerating feature development.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Software Engineer in Test
-                </h4>
-
-                <span style="font-size: small"
-                  >Safaricom PLC (2019 to 2020)</span
-                >
-
-                <p class="timeline-text">
-                  Developed a ReactJS dashboard for test automation, cutting
-                  result delivery time by 60% and giving 20+ developers across 5
-                  teams real-time visibility
-                </p>
-
-                <p class="timeline-text">
-                  Integrated Python automation framework with Jenkins CI/CD,
-                  enabling automated daily testing and ensuring microservice
-                  uptime with comprehensive failure reporting.
-                </p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Software Application Developer
-                </h4>
-
-                <span style="font-size: small">PwC (2017 to 2019)</span>
-
-                <p class="timeline-text">
-                  Led migration from legacy on-prem systems to Salesforce,
-                  successfully moving 100% of critical client data with zero
-                  downtime
-                </p>
-
-                <p class="timeline-text">
-                  Built SSIS ETL packages to streamline cross-system data
-                  exchange, improving reliability between on-prem and cloud
-                  platforms
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="school-outline"></ion-icon>
-              </div>
-
-              <h3 class="h3">Certifications</h3>
-            </div>
-
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h5 style="color: aliceblue">
-                  AWS Certified Data Engineer – Associate
-                </h5>
-              </li>
-
-              <li class="timeline-item">
-                <h5 style="color: aliceblue">
-                  AWS Certified Solutions Architect – Associate
-                </h5>
-              </li>
-            </ol>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">Core skills</h3>
-
-            <ul class="skills-list content-card">
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Data Modeling & Warehousing</h5>
-                  <data value="80">80%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">ETL/ELT & Orchestration</h5>
-                  <data value="70">70%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 70%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Software Engineering</h5>
-                  <data value="90">90%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Cloud Platforms</h5>
-                  <data value="60">60%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 60%"></div>
-                </div>
-              </li>
-
-              <li class="skills-item">
-                <div class="title-wrapper">
-                  <h5 class="h5">Project Management & Team Leadership</h5>
-                  <data value="50">50%</data>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div class="skill-progress-fill" style="width: 50%"></div>
-                </div>
-              </li>
+            <h3 class="label">Certified</h3>
+            <ul>
+              <li><span>2025</span><b>AWS Data Engineer</b><i>Associate</i></li>
+              <li><span>2021</span><b>AWS Solutions Architect</b><i>Associate</i></li>
             </ul>
-          </section>
-        </article>
+          </div>
+        </div>
+      </section>
 
-        <!--
-        - #PORTFOLIO (formerly BLOG)
-      -->
-
-        <article class="blog" data-page="projects">
-          <header>
-            <h2 class="h2 article-title">Projects</h2>
-          </header>
-
-          <section class="blog-posts">
-            <ul class="blog-posts-list">
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-1.jpg"
-                      alt="Design conferences in 2022"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Design conferences in 2022
-                    </h3>
-
-                    <p class="blog-text">
-                      Veritatis et quasi architecto beatae vitae dicta sunt,
-                      explicabo.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-2.jpg"
-                      alt="Best fonts every designer"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      Best fonts every designer
-                    </h3>
-
-                    <p class="blog-text">
-                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
-                      est eligendi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-3.jpg"
-                      alt="Design digest #80"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                    <p class="blog-text">
-                      Excepteur sint occaecat cupidatat no proident, quis
-                      nostrum exercitationem ullam corporis suscipit.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-4.jpg"
-                      alt="UI interactions of the week"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      UI interactions of the week
-                    </h3>
-
-                    <p class="blog-text">
-                      Enim ad minim veniam, consectetur adipiscing elit, quis
-                      nostrud exercitation ullamco laboris nisi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-5.jpg"
-                      alt="The forgotten art of spacing"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      The forgotten art of spacing
-                    </h3>
-
-                    <p class="blog-text">
-                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-6.jpg"
-                      alt="Design digest #79"
-                      loading="lazy"
-                    />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                    <p class="blog-text">
-                      Optio cumque nihil impedit uo minus quod maxime placeat,
-                      velit esse cillum.
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-      </div>
     </main>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
+    <footer class="footer wrap">
+      <span>© <span data-year>2026</span> David Kimanthi</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
 
-    <!--
-    - ionicon link
-  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
